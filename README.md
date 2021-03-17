@@ -14,10 +14,12 @@ Then we created a code that authorizes access to a user's Spotify profile to ext
 ## Clustering
 Now that we had both users' top 50 songs, we can use those tracks for reference to recommend new songs that are curated for both people's recent music tastes. K-means clustering was the method we chose so that we could group each song from our combined songs into a cluster (sub-genre/type of song) regarding their sonic features that are officially provided by Spotify. These features include: danceability, energy, key (musical key), loudness, mode (minor or major), speechiness, acousticness, instrumentalness, liveness, valence (how positive/happy/cheerful it sounds), and tempo.	We chose to focus on danceability, energy, speechiness, acousticness, valence, and tempo after concluding the other features were noise to our analysis. We also chose to have k=20 even though the elbow method showed that optimal k=6 since we wanted to have more specified clusters so that we could base our recommended songs off less generalized clusters.
 
-<img src="Photos/cluster_distribution.png" width="500" > 
-<img src="Photos/cluster_visualization.png" width="500" > 
 
-<img src="Photos/cluster_features_distribution.png" width="400" > 
+![1_MPoDs6szyqxykHcKAv9e5A](https://user-images.githubusercontent.com/68137802/111539026-a6b22100-872a-11eb-9295-365005c8e87b.png)
+
+![1_MPoDs6szyqxykHcKAv9e5A](https://user-images.githubusercontent.com/68137802/111539039-ac0f6b80-872a-11eb-9007-1981ae54979b.png)
+![1_uOOQ3YWo9o2IxH9SzjwojA](https://user-images.githubusercontent.com/68137802/111539050-af0a5c00-872a-11eb-845a-f31ea69a6594.png)
+
 
 ## Building the Playlist Creator
 Once we got a list of songs for each cluster, we fed each list into Spotipy's recommendation() function which takes in 5 seed tracks to base its recommendation from. For the clusters that contained more than 5 songs, we randomly chose 5 from its list to represent the cluster. The clusters that contained less than 5 songs, we left it as is. We ran the recommendation function for each cluster, and each time it produced 1 recommended track for the clusters that contained less than 5 songs and 2 recommended tracks for the clusters that contained 5 songs. We wanted to put more weight onto the clusters with more songs since that meant we generally enjoyed songs that fit in those clusters moreso than the smaller clusters. After fetching all the recommended tracks, we put it into a list and called another Spotipy function that automatically creates and places a playlist with a given list of songs straight to the user's Spotify library.
