@@ -17,7 +17,8 @@ Now that we had both users' top 50 songs, we can use those tracks for reference 
 
 ![1_MPoDs6szyqxykHcKAv9e5A](https://user-images.githubusercontent.com/68137802/111539026-a6b22100-872a-11eb-9295-365005c8e87b.png)
 
-![1_MPoDs6szyqxykHcKAv9e5A](https://user-images.githubusercontent.com/68137802/111539039-ac0f6b80-872a-11eb-9007-1981ae54979b.png)
+![1_mIrQSEMIbdtn0tgLcdg76A](https://user-images.githubusercontent.com/68137802/111539163-cba69400-872a-11eb-9e88-7865ae1fe116.png)
+
 ![1_uOOQ3YWo9o2IxH9SzjwojA](https://user-images.githubusercontent.com/68137802/111539050-af0a5c00-872a-11eb-845a-f31ea69a6594.png)
 
 
@@ -27,3 +28,5 @@ Once we got a list of songs for each cluster, we fed each list into Spotipy's re
 ## Conclusion
 <img src="Photos/created_playlist.png" width="800" > 
 Trustin and I found songs in the playlist that we both enjoyed and we thought matched both of our tastes in music. Trustin and I had commonalities in rap and electronic music and our algorithm was able to find the overlap in the subgenres within those that we enjoyed and found songs that were similar. Overall, our project was a success, and going forward we are looking to develop this idea into a functioning web app that anyone and their friend can use to find music together.
+
+![1_T5E4s8criXF57yL2h_Yvkw](https://user-images.githubusercontent.com/68137802/111539194-d103de80-872a-11eb-8ca4-0a815535f0f2.png)
